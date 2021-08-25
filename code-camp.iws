@@ -4,11 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="68b40c6c-89c5-48f9-aeaf-449014850cdc" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/code-camp.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp.ipr" afterDir="false" />
+    <list default="true" id="68b40c6c-89c5-48f9-aeaf-449014850cdc" name="Changes" comment="Testing form fields for error messages and input checking for the form">
       <change beforePath="$PROJECT_DIR$/code-camp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp.iws" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PlaygroundTestSuite.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/PlaygroundTestSuite.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -254,7 +252,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="jdk.selected.JAVA_MODULE" value="openjdk-16" />
   </component>
-  <component name="RunManager" selected="JUnit.PlaygroundTestSuite.givenLoginMenu_loginButton_buttonTest">
+  <component name="RunManager" selected="JUnit.PlaygroundTestSuite.formPage_fillInForm_checkCredentialsTest">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -271,11 +269,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaygroundTestSuite.givenFreshPage_loadPage_formTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaygroundTestSuite.clickOnHamburger_fillInForm_checkCredentialsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaygroundTestSuite" />
-      <option name="METHOD_NAME" value="givenFreshPage_loadPage_formTest" />
+      <option name="METHOD_NAME" value="clickOnHamburger_fillInForm_checkCredentialsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -286,11 +284,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaygroundTestSuite.givenFreshPage_loginButton_buttonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaygroundTestSuite.clickOnProfile_attemptLogin_checkCredentialsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaygroundTestSuite" />
-      <option name="METHOD_NAME" value="givenFreshPage_loginButton_buttonTest" />
+      <option name="METHOD_NAME" value="clickOnProfile_attemptLogin_checkCredentialsTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -301,11 +299,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaygroundTestSuite.givenFreshPage_uploadButton_buttonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaygroundTestSuite.formPage_blankForm_checkErrorMsgTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaygroundTestSuite" />
-      <option name="METHOD_NAME" value="givenFreshPage_uploadButton_buttonTest" />
+      <option name="METHOD_NAME" value="formPage_blankForm_checkErrorMsgTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -316,11 +314,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PlaygroundTestSuite.givenLoginMenu_loginButton_buttonTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PlaygroundTestSuite.formPage_fillInForm_checkCredentialsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code-camp" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PlaygroundTestSuite" />
-      <option name="METHOD_NAME" value="givenLoginMenu_loginButton_buttonTest" />
+      <option name="METHOD_NAME" value="formPage_fillInForm_checkCredentialsTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="VM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="wholeProject" />
+      </option>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PlaygroundTestSuite.givenFreshPage_clickMeButton_innerTextTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code-camp" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PlaygroundTestSuite" />
+      <option name="METHOD_NAME" value="givenFreshPage_clickMeButton_innerTextTest" />
       <option name="TEST_OBJECT" value="method" />
       <option name="VM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -344,10 +357,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlaygroundTestSuite.givenLoginMenu_loginButton_buttonTest" />
-        <item itemvalue="JUnit.PlaygroundTestSuite.givenFreshPage_loginButton_buttonTest" />
-        <item itemvalue="JUnit.PlaygroundTestSuite.givenFreshPage_uploadButton_buttonTest" />
-        <item itemvalue="JUnit.PlaygroundTestSuite.givenFreshPage_loadPage_formTest" />
+        <item itemvalue="JUnit.PlaygroundTestSuite.formPage_fillInForm_checkCredentialsTest" />
+        <item itemvalue="JUnit.PlaygroundTestSuite.formPage_blankForm_checkErrorMsgTest" />
+        <item itemvalue="JUnit.PlaygroundTestSuite.clickOnHamburger_fillInForm_checkCredentialsTest" />
+        <item itemvalue="JUnit.PlaygroundTestSuite.clickOnProfile_attemptLogin_checkCredentialsTest" />
+        <item itemvalue="JUnit.PlaygroundTestSuite.givenFreshPage_clickMeButton_innerTextTest" />
       </list>
     </recent_temporary>
   </component>
@@ -389,6 +403,14 @@
       <option name="presentableId" value="Default" />
       <updated>1629777037563</updated>
     </task>
+    <task id="LOCAL-00001" summary="Test to check login buttons. Refactor needed">
+      <created>1629785436870</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1629785436870</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -436,6 +458,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Test to check login buttons. Refactor needed" />
+    <MESSAGE value="Testing form fields for error messages and input checking for the form" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing form fields for error messages and input checking for the form" />
   </component>
   <component name="VssConfiguration">
     <CheckoutOptions>
@@ -492,13 +520,23 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java</url>
+          <line>87</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java</url>
+          <line>48</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-method">
           <url>file://$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java</url>
-          <line>36</line>
-          <properties class="PlaygroundTestSuite" method="givenLoginMenu_loginButton_buttonTest">
+          <line>75</line>
+          <properties class="PlaygroundTestSuite" method="formPage_blankForm_checkErrorMsgTest">
             <option name="EMULATED" value="true" />
           </properties>
-          <option name="timeStamp" value="1" />
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
