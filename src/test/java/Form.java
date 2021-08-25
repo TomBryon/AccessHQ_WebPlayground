@@ -22,8 +22,8 @@ public class Form {
         element.findElement(By.tagName("button")).click();
     }
 
-    public void wait(WebDriver driver){
-        driver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
+    public void wait(WebDriver driver, long i){
+        driver.manage().timeouts().implicitlyWait(i, TimeUnit.MILLISECONDS);
     }
 
     public boolean foundErrorMsg(WebDriver driver) {
@@ -35,6 +35,12 @@ public class Form {
         else {
             return false;
         }
+    }
+    public WebElement getField(String id) {
+        return driver.findElement(By.id(id));
+    }
 
+    public void clickCheckBox(WebDriver driver) {
+        driver.findElement(By.className("v-input--selection-controls__ripple")).click();
     }
 }

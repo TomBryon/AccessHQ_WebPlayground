@@ -42,26 +42,23 @@ public class PlaygroundTestSuite {
 
     @Test
     public void formPage_fillInForm_checkCredentialsTest() {
-        chromeDriver.get("https://d1iw6mb9di5l9r.cloudfront.net/#/forms");
+        //arrange
+        Form f = new Form(chromeDriver);
+        //act
+        f.getField("name").sendKeys("Thomas Bryon");
+        f.getField("email").sendKeys("t.j.bryon@gmail.com");
+        f.getField("state").sendKeys("QLD");
+        f.clickCheckBox(chromeDriver);
 
-        WebElement nameField = chromeDriver.findElement(By.id("name"));
-        nameField.sendKeys("Thomas Bryon");
+        WebElement card = f.getCard();
+        f.clickSubmitButton(card);
+        f.wait(chromeDriver, 5000);
 
-        WebElement emailField = chromeDriver.findElement(By.id("email"));
-        emailField.sendKeys("t.j.bryon@gmail.com");
-
-        WebElement stateField = chromeDriver.findElement(By.id("state"));
-        stateField.sendKeys("QLD");
-        chromeDriver.findElement(By.className("v-input--selection-controls__ripple")).click();
-
-        WebElement card = chromeDriver.findElement(By.className("v-card__text"));
-        card.findElement(By.tagName("button")).click();
-
-        chromeDriver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
         //Assert: check if error msgs are not present
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("name-err")).size());
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("email-err")).size());
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("agree-err")).size());
+
         //Check popup has appeared
         //WebElement response = chromeDriver.findElement(By.className("snackbar popup-message mr-auto"));
         //Assertions.assertEquals("Thanks for your feedback Thomas Bryon", response.getText());
@@ -75,7 +72,7 @@ public class PlaygroundTestSuite {
         WebElement card = f.getCard();
         //act
         f.clickSubmitButton(card);
-        f.wait(chromeDriver);
+        f.wait(chromeDriver, 5000);
         //assert
         Assertions.assertTrue(f.foundErrorMsg(chromeDriver));
     }
