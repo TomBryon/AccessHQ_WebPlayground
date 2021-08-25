@@ -1,16 +1,10 @@
-
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
-
-import static io.restassured.RestAssured.*;
-import static org.hamcrest.Matchers.*;
 import org.openqa.selenium.chrome.ChromeDriver;
-
-import java.util.NoSuchElementException;
 import java.util.concurrent.TimeUnit;
 
-
 public class PlaygroundTestSuite {
+
     private WebDriver chromeDriver;
 
     @BeforeEach
@@ -30,7 +24,9 @@ public class PlaygroundTestSuite {
     @Test
     public void givenFreshPage_loginButton_buttonTest() {
         chromeDriver.findElement(By.id("loginButton")).click();
-        Assertions.assertEquals("You clicked the login button", "You clicked the login button");
+        WebElement popup = chromeDriver.findElement(By.className("alert-message"));
+        chromeDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
+        //Assertions.assertEquals("You clicked the login button", popup.getText());
     }
 
     @Test
@@ -62,7 +58,7 @@ public class PlaygroundTestSuite {
         card.findElement(By.tagName("button")).click();
 
         chromeDriver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-        //check if error msgs are not present
+        //Assert: check if error msgs are not present
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("name-err")).size());
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("email-err")).size());
         Assertions.assertEquals(0, chromeDriver.findElements(By.id("agree-err")).size());
@@ -74,15 +70,14 @@ public class PlaygroundTestSuite {
 
     @Test
     public void formPage_blankForm_checkErrorMsgTest() {
-        chromeDriver.get("https://d1iw6mb9di5l9r.cloudfront.net/#/forms");
-        WebElement card = chromeDriver.findElement(By.className("v-card__text"));
-        card.findElement(By.tagName("button")).click();
-
-        chromeDriver.manage().timeouts().implicitlyWait(5000, TimeUnit.MILLISECONDS);
-
-        Assertions.assertTrue(chromeDriver.findElement(By.id("name-err")).isDisplayed());
-        Assertions.assertTrue(chromeDriver.findElement(By.id("email-err")).isDisplayed());
-        Assertions.assertTrue(chromeDriver.findElement(By.id("agree-err")).isDisplayed());
+        //arrange
+        Form f = new Form(chromeDriver);
+        WebElement card = f.getCard();
+        //act
+        f.clickSubmitButton(card);
+        f.wait(chromeDriver);
+        //assert
+        Assertions.assertTrue(f.foundErrorMsg(chromeDriver));
     }
 
     @Test
@@ -94,18 +89,20 @@ public class PlaygroundTestSuite {
     }
 
     @Test
-    public void clickOnHamburger_attemptLogin_loginCredentialsTest() {
-        chromeDriver.findElement(By.cssSelector("[aria-label=users]")).click();
-        WebElement card = chromeDriver.findElement(By.className("v-dialog--active"));
-        card.findElement(By.id("loginButton")).click();
-        var invalidText = card.findElements(By.className(".v-messages__message"));
-        for (WebElement i : invalidText) {
-            Assertions.assertEquals("Invalid user and password", invalidText.toString());
-        }
+    public void clickOnProfile_attemptLogin_loginCredentialsTest() {
+        //arrange
+        HomePage hp = new HomePage(chromeDriver);
+        hp.clickProfileButton();
+        //act
+        hp.clickProfileFormLoginButton();
+        hp.waitUntilAlertMsgVisible();
+        //assert
+        Assertions.assertTrue(chromeDriver.findElements(By.className("v-messages__message")).size() == 2);
     }
+
     @AfterEach
     public void cleanUp() {
-        //chromeDriver.quit();
+        chromeDriver.quit();
     }
 
 }
