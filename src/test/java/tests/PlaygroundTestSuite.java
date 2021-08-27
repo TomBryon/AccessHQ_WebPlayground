@@ -1,3 +1,7 @@
+package tests;
+
+import UI.Form;
+import UI.HomePage;
 import org.junit.jupiter.api.*;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -28,6 +32,13 @@ public class PlaygroundTestSuite {
         chromeDriver.manage().timeouts().implicitlyWait(1000, TimeUnit.MILLISECONDS);
         //Assertions.assertEquals("You clicked the login button", popup.getText());
     }
+    @Test
+    public void givenFreshPage_clickMeButton_innerTextTest() {
+        By locator = By.cssSelector("[role=button]");
+        WebElement movingButton = chromeDriver.findElement(locator);
+        movingButton.click();
+        Assertions.assertEquals("CLICK ME DOWN!", movingButton.getText());
+    }
 
     @Test
     public void clickOnProfile_attemptLogin_blankCredentialsTest() {
@@ -38,6 +49,18 @@ public class PlaygroundTestSuite {
         for (WebElement i : invalidText) {
             Assertions.assertEquals("Invalid user and password", invalidText.toString());
         }
+    }
+
+    @Test
+    public void clickOnProfile_attemptLogin_loginCredentialsTest() {
+        //arrange
+        HomePage hp = new HomePage(chromeDriver);
+        hp.clickProfileButton();
+        //act
+        hp.clickProfileFormLoginButton();
+        hp.waitUntilAlertMsgVisible();
+        //assert
+        Assertions.assertTrue(chromeDriver.findElements(By.className("v-messages__message")).size() == 2);
     }
 
     @Test
@@ -75,26 +98,6 @@ public class PlaygroundTestSuite {
         f.wait(chromeDriver, 5000);
         //assert
         Assertions.assertTrue(f.foundErrorMsg(chromeDriver));
-    }
-
-    @Test
-    public void givenFreshPage_clickMeButton_innerTextTest() {
-        By locator = By.cssSelector("[role=button]");
-        WebElement movingButton = chromeDriver.findElement(locator);
-        movingButton.click();
-        Assertions.assertEquals("CLICK ME DOWN!", movingButton.getText());
-    }
-
-    @Test
-    public void clickOnProfile_attemptLogin_loginCredentialsTest() {
-        //arrange
-        HomePage hp = new HomePage(chromeDriver);
-        hp.clickProfileButton();
-        //act
-        hp.clickProfileFormLoginButton();
-        hp.waitUntilAlertMsgVisible();
-        //assert
-        Assertions.assertTrue(chromeDriver.findElements(By.className("v-messages__message")).size() == 2);
     }
 
     @AfterEach
