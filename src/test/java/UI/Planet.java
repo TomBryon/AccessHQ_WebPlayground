@@ -18,7 +18,7 @@ public class Planet {
         return this.distance;
     }
 
-    public float getRadius() {
+    public float getRadiusOfPlanet() {
         return this.radius;
     }
 

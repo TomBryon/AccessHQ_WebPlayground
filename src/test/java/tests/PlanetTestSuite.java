@@ -67,16 +67,16 @@ public class PlanetTestSuite {
     @Test
     public void givenPlanetsPage_getPlanetRadius_explorePlanetBasedOnRadius() {
         //arrange
-        PlanetTile planetTile = new PlanetTile(chromeDriver);
-        MatchRadius planetRadius = new MatchRadius();
+        var planetTile = new PlanetTile(chromeDriver);
+        var planetRadius = new MatchRadius();
         var planetListElms = planetTile.getPlanetList();
         //act
         for (var planet : planetListElms) {
-            if(planetRadius.match(planet, 4000)) {
+            if(planetRadius.match(planetTile, planet, 4000)) {
                 planetTile.clickPlanetButton();
                 String popUpText = getPopUpMessage();
                 //assert
-                Assertions.assertEquals("Exploring" + planet.getName(), popUpText);
+                Assertions.assertEquals("Exploring" + planetTile.getPlanetName(), popUpText);
             }
         }
     }

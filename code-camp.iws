@@ -5,19 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68b40c6c-89c5-48f9-aeaf-449014850cdc" name="Changes" comment="refactored more tests">
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI/Planet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/UI/PlanetTile.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/strategies/DistanceComparison.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/strategies/MatchRadius.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/strategies/Matchable.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/FormTestSuite.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/PlanetTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/code-camp.ipr" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp.ipr" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/code-camp.iws" beforeDir="false" afterPath="$PROJECT_DIR$/code-camp.iws" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/Form.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/Form.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/HomePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/HomePage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/PlaygroundTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PlaygroundTestSuite.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/PlaygroundTestSuite.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/Planet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/Planet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/UI/PlanetTile.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/UI/PlanetTile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/strategies/DistanceComparison.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/strategies/DistanceComparison.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/strategies/MatchRadius.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/strategies/MatchRadius.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/PlanetTestSuite.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/PlanetTestSuite.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,7 +270,7 @@
       <recent name="C:\source\repos\playgroundTestSuite\src\test\java" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetTile_checkPopupText">
+  <component name="RunManager" selected="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetRadius_explorePlanetBasedOnRadius">
     <configuration selected="false" default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
@@ -411,8 +404,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetTile_checkPopupText" />
         <item itemvalue="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetRadius_explorePlanetBasedOnRadius" />
+        <item itemvalue="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetTile_checkPopupText" />
         <item itemvalue="JUnit.PlanetTestSuite.givenPlanetsPage_getPlanetName_checkPlanetName" />
         <item itemvalue="JUnit.PlanetTestSuite.givenPlanetsPage_checkHeader" />
         <item itemvalue="JUnit.PlanetTestSuite" />
@@ -485,7 +478,14 @@
       <option name="project" value="LOCAL" />
       <updated>1629866552818</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="refactored more tests">
+      <created>1630023684851</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1630023684851</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
